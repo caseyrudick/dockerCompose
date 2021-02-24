@@ -1,0 +1,17 @@
+version: '3'
+services: 
+  redis-server:
+  # means use redis-server above by using the server redis, below
+    image: 'redis'
+  node-app:
+    # build the node app above with the image below. The '.' means itll
+    # look for a Dockerfile in the current directory to build this image
+    build: .
+    # need to specify the ports we want to be opened up on this container
+    ports:
+    # note '-' is how we specify an array in yaml files
+    # remember the first number is the port on your local machine and the
+    # second is the port inside the container
+    # we're doing 4000:8081 just for the sake of showing in the exercise 
+    # the distinction
+      - "4000:8081"
