@@ -14,4 +14,4 @@ services:
     # second is the port inside the container
     # we're doing 4000:8081 just for the sake of showing in the exercise 
     # the distinction
-      - "4000:8081"
+      - "4001:8081"
